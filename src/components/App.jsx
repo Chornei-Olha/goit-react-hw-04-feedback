@@ -11,8 +11,7 @@ export function App() {
   const [bad, setBad] = useState(0);
 
 
-  const onLeaveFeedback = e => {
-    const option = e.target.name;
+  const onLeaveFeedback = (option) => {
 
     switch (option) {
       case 'good':
@@ -43,7 +42,7 @@ export function App() {
     if (total > 0) {
       result = Math.ceil((positivePercentage / total) * 100);
     }
-    return `${result}%`;
+    return `${result}`;
   };
 
   return (
